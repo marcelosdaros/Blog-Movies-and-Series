@@ -1,0 +1,21 @@
+=======================================================================================
+Fator de Resolução
+=======================================================================================
+Largura X Altura
+
+Telas de antigamente:
+800 X 600 => máximo: 768px
+1024 x 768 => máximo: 960 px
+
+Mais novas (básicas):
+1280 x 1024 => máximo: 1200px (resolução mínima / padrão)
+
+=======================================================================================
+Metodologias de CSS
+=======================================================================================
+BEM - Block Element Modifier
+
+.block {}
+.block__element {} -> elemento
+.block--modifier {} -> modifier
+.block__element--modifier {} -> um modifier dentro de um elemento de um determinado block

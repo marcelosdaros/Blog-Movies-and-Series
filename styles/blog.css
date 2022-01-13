@@ -1,0 +1,253 @@
+body {
+  font: 100%/1.5em arial, verdana, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: black;
+  background-image: url(../images/imagem_de_fundo.jpg);
+  height: 100%;
+  width: 100vw;
+  padding: 20px;
+}
+
+.site-container {
+  max-width: 1200px;
+  height: auto;
+  margin: auto;
+/*background-color: cadetblue*/
+}
+
+.site-header, .site-main {
+  padding-bottom: 20px;
+}
+
+  .logo {
+    padding-bottom: 20px;
+  }
+
+    .logo a {
+      font-size: 0%;
+      display: block;
+      background-image: url(../images/logo.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 140px;
+      background-color: rgba(0, 0, 0, 0.9);
+      border-radius: 25px;
+      margin: auto;
+      height: 100px;
+      width: 160px;
+    }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 10px;
+    border-radius: 25px;
+  }
+
+  .menu__item a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 2px;
+  }
+
+  .menu__item a:hover {
+    color: white;
+    background-color:maroon;
+    text-decoration: underline;
+    border-radius: 25px;
+  }
+
+  .content {
+    padding-top: 20px;
+    display: grid;
+    gap: 20px;
+  }
+
+    .cinema {
+      font-size: 0%;
+      background-image: url(../images/imagem_cinema.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 341px;
+      width: 100%;
+      margin: auto;
+      border: 4px solid black;
+      border-radius: 25px;
+    }
+    
+    .post {
+      color: white;
+      text-align: center;
+      height: 550px;
+      border-radius: 25px;
+    }
+
+      .post__title {
+        font-weight: bold;
+        padding: 10px;
+        background-color: black;
+        border-radius: 25px;
+      }
+
+      .post__description {
+        height: 496px;
+        overflow: auto;
+        border-radius: inherit;
+      }
+
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: hidden;
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background:gray;
+        border-radius: 25px;
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: darkgray;
+      }
+
+        .movie, .serie, .popular, .highlighted, .awarded {
+          background-color: maroon;
+          border: 4px solid black;
+          border-top-width: 2px;
+          border-bottom-width: 2px;
+          border-radius: 25px;
+          padding: 10px 20px;
+        }
+
+          .movie__title, .serie__title, .popular__title, .highlighted__title, .awarded__title {
+            font-weight: bold;
+            padding-bottom: 10px;
+          }
+
+          .movie__description, .serie__description, .popular__description, .highlighted__description, .awarded__description {
+            text-align: justify;
+            padding-bottom: 10px;
+          }
+
+          .movie__trailer, .serie__trailer, .popular__trailer, .highlighted__trailer, .awarded__trailer {
+            width: 100%;
+            height: 166px;
+            border-radius: 20px;
+          }
+
+  .site-footer {
+    height: 100px;
+    text-align: center;
+    color: white;
+    background-color: black;
+    border-radius: 25px;
+    padding-top: 20px;
+  }
+
+    .copyright {
+      font-size: 12px;
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    .social {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .social a {
+      background-color: yellow;
+      width: 34.5px;
+      height: 34.5px;
+      margin-left: 16px;
+      background-image: url(../images/social-icons.png);
+      text-indent: -9000px;
+    }
+
+    .social__fb {
+      background-position: -156px -130px;
+    }
+
+    .social__tw {
+      background-position: -117px -130px;
+    }
+
+    .social__yt {
+      background-position: -546px -130px;
+    }
+
+    .social__fb:hover {
+      background-position: -156px 0px;
+    }
+
+    .social__tw:hover {
+      background-position: -117px 0px;
+    }
+
+    .social__yt:hover {
+      background-position: -546px 0px;
+    }
+
+@media screen and (min-width: 552px) {
+  .cinema {
+    width: 512px;
+  }
+
+  .movie__trailer, .serie__trailer, .popular__trailer, .highlighted__trailer, .awarded__trailer {
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .site-header .menu {
+    flex-direction: row;
+  }
+
+  .site-header .menu__item {
+    flex-grow: 1;
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .post:nth-child(5) {
+    grid-column-start: -3;
+    grid-column-end: -1;
+  }
+
+  .post__description:nth-child(5) {
+    height: 475px;
+  }
+
+  .movie__trailer, .serie__trailer, .popular__trailer, .highlighted__trailer{
+    height: 200px;
+  }
+
+  .awarded__trailer {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .movie__trailer, .serie__trailer, .popular__trailer, .highlighted__trailer {
+    height: 250px;
+  }
+
+  .awarded__trailer {
+    width: 550px;
+    height: 301px;
+  }
+}
