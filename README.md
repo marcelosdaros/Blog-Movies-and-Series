@@ -1,2 +1,4 @@
-# Blog-Movies-and-Series
-Blog about movies and series to test and learn HTML and CSS
+Blog-Movies-and-Series
+-------------------------------------------------------------------
+
+Blog developed to learn and test HTML and CSS
